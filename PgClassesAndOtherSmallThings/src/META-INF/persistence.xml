@@ -6,10 +6,10 @@
     <class>pgclassesandothersmallthings.pgClasses.Airport</class>
     <class>pgclassesandothersmallthings.pgClasses.Airline</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dk-319_air?zeroDateTimeBehavior=convertToNull"/>
-      <property name="javax.persistence.jdbc.user" value="dk-319"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dk-3xx_air?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="dk-3xx"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="tFsAcVVA"/>
+      <property name="javax.persistence.jdbc.password" value="xxxxx"/>
     </properties>
   </persistence-unit>
 </persistence>

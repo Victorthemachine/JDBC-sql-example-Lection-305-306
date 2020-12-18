@@ -10,6 +10,8 @@
       <property name="javax.persistence.jdbc.user" value="dk-3xx"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="xxxxx"/>
+      <property name="eclipselink.logging.level.sql" value="FINE"/> 
+      <property name="eclipselink.logging.parameters" value="true"/>
     </properties>
   </persistence-unit>
 </persistence>

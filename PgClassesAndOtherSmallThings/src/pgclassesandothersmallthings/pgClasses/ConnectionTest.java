@@ -14,6 +14,7 @@ import java.sql.*;
 public class ConnectionTest {
 
     public static void main(String[] args) throws SQLException {
+        System.out.println("TEST");
         Connection con = DriverManager.getConnection(Config.URL, Config.USER, Config.PASSWORD);
         AirlineClient air = new AirlineClient(con);
         con.setAutoCommit(false);
@@ -24,7 +25,7 @@ public class ConnectionTest {
         System.out.println(air.getCountryByName("Ruzyne"));*/
             
             //REMEMBER TO DELETE THE ROWS AFTER TRYING THESE!!!
-            
+            System.out.println("Processing query!");
             //=======Error Showcase=======
             air.addRoute(59037, 4934, 548, 1667);
             /* //( ͡° ͜ʖ ͡°)
@@ -39,10 +40,14 @@ public class ConnectionTest {
             //air.addRoute(59038, 4934, 548, 1667);
             //=======Adding two rows to route Showcase=======        
             con.commit();
+            System.out.println("Succesfully processed query!");
         } catch (Exception ex) {
             System.out.println("An error occured while attempting to use Airline methods\nvvv Stack trace vvv");
             ex.printStackTrace(System.err);
             con.rollback();
+        } finally {
+            con.close();
+            System.out.println("Closed connection!");
         }
         
         //=========OLD (split into AirlineClient class for clarity)=========

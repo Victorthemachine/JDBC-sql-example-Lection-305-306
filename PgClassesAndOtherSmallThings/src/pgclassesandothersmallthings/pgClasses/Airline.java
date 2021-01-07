@@ -26,7 +26,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "airline")
 @NamedQueries({
-    @NamedQuery(name = "Airline_1.findAll", query = "SELECT a FROM Airline_1 a")})
+    @NamedQuery(name = "Airline.findAll", query = "SELECT a FROM Airline a")})
 public class Airline implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -171,7 +171,8 @@ public class Airline implements Serializable {
 
     @Override
     public String toString() {
-        return "pgclassesandothersmallthings.pgClasses.Airline_1[ id=" + id + " ]";
+        return "Airline: " + name + " [" + id + "]";
+        //return "pgclassesandothersmallthings.pgClasses.Airline[ id=" + id + " ]";
     }
     
 }
